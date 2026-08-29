@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-luxury-bg: #07130e;
+    --color-luxury-surface: #0e1a15;
+    --color-luxury-surface-subtle: #13221c;
+    --color-gold-light: #f3e5c8;
+    --color-gold-champagne: #dfc187;
+    --color-gold-primary: #cda665;
+    --color-gold-dark: #9e763b;
+    --color-gold-shadow: rgba(205, 166, 101, 0.25);
+    --color-emerald-deep: #062318;
+    --color-emerald-accent: #147a54;
+    --color-jade-deep: #082d1f;
+    --color-jade-accent: #199c6b;
+    --color-border-subtle: #1e3328;
+    --color-border-gold: rgba(205, 166, 101, 0.35);
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #06110d;
+    color: #f1ecd9;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-serif, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  }
+}
+
+.font-display {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* Dedicated Hero Green Texture Background (Exact match for uploaded image) */
+.hero-emerald-texture {
+  background-color: #011911;
+  background-image: 
+    /* Top-Right Emerald Studio Light Glow matching the uploaded photo */
+    radial-gradient(ellipse 95% 85% at 88% 8%, rgba(9, 79, 52, 0.95) 0%, rgba(3, 66, 42, 0.88) 10%, rgba(5, 62, 42, 0.94) 52%, rgba(2, 32, 22, 0.98) 78%, #01130d 100%),
+    /* Secondary soft ambient depth */
+    radial-gradient(circle at 15% 85%, rgba(1, 15, 10, 0.85) 0%, transparent 60%),
+     /* Ultra-fine tactile pebbled leather grain texture */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='fineGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.08  0 0 0 0 0.42  0 0 0 0 0.28  0 0 0 0 0.22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23fineGrain)'/%3E%3C/svg%3E"),
+    /* Fine stippled surface relief */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='relief'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.12' numOctaves='3' result='turb'/%3E%3CfeDiffuseLighting in='turb' lighting-color='%231fa872' surfaceScale='1.4' result='light'%3E%3CfeDistantLight azimuth='75' elevation='50'/%3E%3C/feDiffuseLighting%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.05  0 0 0 0 0.35  0 0 0 0 0.24  0 0 0 0 0.16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23relief)'/%3E%3C/svg%3E");
+  background-size: 100% 100%, 100% 100%, 200px 200px, 150px 150px; 
+}
+
+/* Background Texture with luxury dark depth and rich hints of jade & emerald green */
+.leather-background {
+  background-color: #06110d;
+  background-image: 
+    /* Ambient Jade and Emerald Green Atmospheric Blooms */
+    radial-gradient(ellipse 120% 70% at 85% 18%, rgba(3, 66, 42, 0.88) 0%, rgba(10, 62, 42, 0.18) 40%, transparent 75%),
+    radial-gradient(ellipse 110% 80% at 12% 48%, rgba(14, 88, 60, 0.26) 0%, rgba(7, 48, 32, 0.14) 45%, transparent 80%),
+    radial-gradient(ellipse 130% 90% at 50% 82%, rgba(22, 115, 78, 0.24) 0%, rgba(9, 52, 36, 0.14) 45%, transparent 75%),
+    /* Underlying dark luxury vignette with forest undertones */
+    radial-gradient(ellipse 140% 100% at 50% 50%, rgba(12, 28, 20, 0.65) 0%, rgba(6, 16, 12, 0.94) 70%, #040d0a 100%),
+    /* Micro leather / canvas tactile grain texture */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='leatherNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.08  0 0 0 0 0.25  0 0 0 0 0.18  0 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23leatherNoise)'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 280px 280px;
+}
+
+/* --- LUXURY UI DESIGN SYSTEM CLASSES (from reference image) --- */
+
+/* 1. Satin Gold Round Pill Button (Reference: "Subscribe", "Get Started") */
+.btn-luxury-gold {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.875rem; /* ~14px rounded corners */
+  background: linear-gradient(180deg, #e3c790 0%, #cda665 55%, #a67c38 100%);
+  color: #14120c;
+  font-weight: 700;
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.45),
+    0 4px 16px rgba(180, 135, 60, 0.28),
+    0 1px 3px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(245, 225, 175, 0.3);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.btn-luxury-gold:hover {
+  background: linear-gradient(180deg, #ecd4a4 0%, #d8b273 55%, #b58943 100%);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    0 6px 24px rgba(205, 166, 101, 0.45),
+    0 2px 6px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-luxury-gold:active {
+  transform: translateY(1px);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.25),
+    0 2px 8px rgba(180, 135, 60, 0.2);
+}
+
+/* 2. Dark Matte Round Outline Button (Reference: "Learn More") */
+.btn-luxury-outline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.875rem;
+  background: #111a15;
+  border: 1px solid rgba(205, 166, 101, 0.45);
+  color: #dfc187;
+  font-weight: 600;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.btn-luxury-outline:hover {
+  background: #17241e;
+  border-color: #dfc187;
+  color: #f5eedb;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 18px rgba(205, 166, 101, 0.25),
+    0 4px 16px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+/* 3. Luxury Matte Dark Card Frame (Reference: Dark container cards with smooth rounded corners) */
+.card-luxury-dark {
+  background: #0f1915;
+  border-radius: 1.25rem; /* 20px */
+  border: 1px solid #1c3026;
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.06),
+    0 12px 36px -8px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-luxury-dark:hover {
+  border-color: rgba(205, 166, 101, 0.55);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.09),
+    0 16px 44px -8px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(20, 115, 78, 0.18),
+    0 0 15px rgba(205, 166, 101, 0.12);
+}
+
+/* 4. Luxury Gold/Bronze Accent Card (Reference: "Heading" & "About Us" cards) */
+.card-luxury-gold {
+  background: linear-gradient(145deg, #c79e5e 0%, #a67c3b 50%, #8b642a 100%);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(245, 225, 175, 0.35);
+  color: #17130c;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.35),
+    0 16px 40px -10px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(199, 158, 94, 0.2);
+}
+
+/* 5. Luxury Rounded Square Icon Box (Reference: "Our Services" 3 icons with fine wireframes) */
+.icon-luxury-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.875rem; /* ~14px rounded-xl */
+  background: #111e18;
+  border: 1px solid rgba(205, 166, 101, 0.4);
+  color: #dfc187;
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.06),
+    0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+}
+
+.group:hover .icon-luxury-box,
+.icon-luxury-box:hover {
+  border-color: #dfc187;
+  color: #fbf5e6;
+  background: #1a2c24;
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.12),
+    0 0 14px rgba(20, 120, 82, 0.35),
+    0 0 10px rgba(205, 166, 101, 0.2);
+  transform: scale(1.05);
+}
+
+/* 6. Luxury Pill Badge */
+.badge-luxury-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: #0f1c16;
+  border: 1px solid rgba(205, 166, 101, 0.3);
+  color: #dfc187;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Infinite Marquee Animation for client logos */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar for clean carousels while keeping functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
