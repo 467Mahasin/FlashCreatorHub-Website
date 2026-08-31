@@ -19,7 +19,8 @@
   }
 
   body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-display: swap;
     background-color: #06110d;
     color: #f1ecd9;
     overflow-x: hidden;
@@ -27,24 +28,100 @@
   }
 
   h1, h2, h3, h4, .font-heading {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-display: swap;
   }
 
   .font-serif, .font-serif-luxury {
-    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-family: 'Cormorant Garamond', 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+    font-display: swap;
   }
 }
 
 .font-display {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-display: swap;
 }
 
 .font-serif-luxury {
-  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+  font-display: swap;
 }
 
 .font-cinzel {
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', 'Georgia', 'Times New Roman', serif;
+  font-display: swap;
+}
+
+@keyframes showcase-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  width: max-content;
+  will-change: transform;
+  animation: showcase-marquee 26s linear infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Hero section fade-in animations */
+@keyframes hero-fade-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hero-fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-logo-container {
+  animation: hero-fade-scale 0.6s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+.hero-title {
+  animation: hero-fade-slide-up 0.6s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+.hero-subheading {
+  animation: hero-fade-slide-up 0.6s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+.hero-cta-wrapper {
+  animation: hero-fade-slide-up 0.6s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    transform: none;
+  }
 }
 
 /* Dedicated Hero Green Texture Background (Exact match for uploaded image) */

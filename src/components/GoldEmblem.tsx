@@ -34,6 +34,8 @@ export const GoldEmblem: React.FC<GoldEmblemProps> = ({
         <img
           src="/gold logo.png"
           alt="Flash Creator Hub Emblem"
+          width="200"
+          height="200"
           className="relative z-10 w-full h-full object-contain"
           onError={() => setImageError(true)}
         />

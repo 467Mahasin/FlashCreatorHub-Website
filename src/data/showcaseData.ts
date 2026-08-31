@@ -200,7 +200,7 @@ export const CONTACT_METHODS: ContactMethod[] = [
     id: 'whatsapp',
     name: 'WhatsApp',
     actionLabel: 'Chat with us',
-    detail: '+1 (630) 305-5195',
+    detail: '+91 6303055195',
     url: 'https://wa.me/6303055195?text=Hi%20Flash%20Creator%20Hub,%20I%20would%20like%20to%20explore%20a%20partnership%20for%20my%20personal%20brand.',
     icon: 'whatsapp',
     isExternal: true,

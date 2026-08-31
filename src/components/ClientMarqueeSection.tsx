@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Sparkles } from 'lucide-react';
 import { CLIENT_PICTURE_LOGOS } from './ClientLogos';
 
 export const ClientMarqueeSection: React.FC = () => {
-  // Duplicate array 3 times for a seamless infinite loop
-  const marqueeItems = [
-    ...CLIENT_PICTURE_LOGOS,
-    ...CLIENT_PICTURE_LOGOS,
-    ...CLIENT_PICTURE_LOGOS,
-  ];
+  const marqueeItems = useMemo(
+    () => [...CLIENT_PICTURE_LOGOS, ...CLIENT_PICTURE_LOGOS],
+    []
+  );
 
   return (
     <section
@@ -49,9 +47,13 @@ export const ClientMarqueeSection: React.FC = () => {
                 <img
                   src={client.imageSrc}
                   alt={client.alt}
+                  width="160"
+                  height="56"
                   referrerPolicy="no-referrer"
-                  className="max-h-[50px] sm:max-h-[56px] max-w-[160px] sm:max-w-[185px] w-auto h-auto object-contain transition-all duration-300 opacity-60 grayscale group-hover:opacity-100 group-hover:grayscale-0"
                   loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                  className="max-h-[50px] sm:max-h-[56px] max-w-[160px] sm:max-w-[185px] w-auto h-auto object-contain transition-all duration-300 opacity-60 grayscale group-hover:opacity-100 group-hover:grayscale-0"
                 />
               </div>
             </div>

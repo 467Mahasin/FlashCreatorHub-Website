@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'motion/react';
 import { GoldEmblem } from './GoldEmblem';
 
 interface HeroSectionProps {
@@ -30,47 +29,35 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="relative z-10 flex flex-col items-center max-w-4xl mx-auto w-full my-auto">
         
         {/* Centered Clean Gold Logo */}
-        <motion.div
+        <div
           id="hero-gold-logo-container"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-4 sm:mb-6"
+          className="hero-logo-container mb-4 sm:mb-6"
         >
           <GoldEmblem size="hero" />
-        </motion.div>
+        </div>
 
         {/* Brand Name */}
-        <motion.h1
+        <h1
           id="hero-agency-name"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#f1ecd9] font-heading uppercase leading-[1.1] mb-2 sm:mb-3 px-2"
+          className="hero-title text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#f1ecd9] font-heading uppercase leading-[1.1] mb-2 sm:mb-3 px-2"
         >
           <span className="block tracking-wider">
             Flash Creator Hub
           </span>
-        </motion.h1>
+        </h1>
 
         {/* Supporting Subheading */}
-        <motion.p
+        <p
           id="hero-subheading"
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-          className="text-xs sm:text-sm md:text-base lg:text-lg text-[#d9be84]/90 font-serif italic max-w-2xl mx-auto leading-relaxed tracking-wide mb-6 sm:mb-8 px-4"
+          className="hero-subheading text-xs sm:text-sm md:text-base lg:text-lg text-[#d9be84]/90 font-serif italic max-w-2xl mx-auto leading-relaxed tracking-wide mb-6 sm:mb-8 px-4"
         >
           Architecting authority and profitable personal brands for growth-focused founders, business leaders, and creators.
-        </motion.p>
+        </p>
 
         {/* CTA Button in Luxury UI Round Button Style */}
-        <motion.div
+        <div
           id="hero-cta-wrapper"
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="flex items-center justify-center w-full"
+          className="hero-cta-wrapper flex items-center justify-center w-full"
         >
           <a
             id="hero-explore-partnership-btn"
@@ -79,9 +66,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             rel="noopener noreferrer"
             className="btn-luxury-gold px-8 sm:px-10 py-3.5 sm:py-4 text-xs sm:text-sm uppercase tracking-[0.14em] font-sans font-bold shadow-lg"
           >
-            Explore a Partnership
+            Work With Us
           </a>
-        </motion.div>
+        </div>
 
       </div>
     </section>

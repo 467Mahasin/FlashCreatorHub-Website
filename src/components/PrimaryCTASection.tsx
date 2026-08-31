@@ -68,7 +68,7 @@ export const PrimaryCTASection: React.FC<PrimaryCTASectionProps> = ({
             className="relative inline-flex items-center gap-3.5 px-9 py-4.5 rounded-full bg-gradient-to-r from-[#D4AF37] via-[#E5C358] to-[#C5A059] text-[#07150E] font-display font-bold text-base sm:text-lg tracking-wide shadow-[0_8px_30px_rgba(212,175,55,0.3)] transition-all duration-300 transform group-hover:-translate-y-0.5 group-hover:scale-[1.02] group-hover:shadow-[0_12px_40px_rgba(212,175,55,0.45)] group-active:translate-y-0 select-none"
           >
             <MessageCircle className="w-5 h-5 text-[#07150E] fill-[#07150E]/20" />
-            <span>Explore a Partnership</span>
+            <span>Work With Us</span>
             <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </motion.div>
